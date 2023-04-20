@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1681970506 "main.xdv" "main.pdf" "main" 1681970506 0
-  "main.xdv" 1681970505 26872 f07d1215cbfb711e07e23187da63d521 "xelatex"
+["xdvipdfmx"] 1682001609 "main.xdv" "main.pdf" "main" 1682001610 0
+  "main.xdv" 1682001609 25848 f62d827da9198c3f4f4c28eca97fecb7 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1681970503 "c:/Users/user/Desktop/aog/ScienceFair/report/main.tex" "main.xdv" "main" 1681970506 0
+["xelatex"] 1682001607 "c:/Users/user/Desktop/aog/ScienceFair/report/main.tex" "main.xdv" "main" 1682001610 0
   "C:/Users/user/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1676817738 36439726 107a9dfb48d67fdfb1208007669fadc0 ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -87,15 +87,13 @@
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/XeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
-  "c:/Users/user/Desktop/aog/ScienceFair/report/main.tex" 1681921165 205 d39503731f7911e92f6ddd5d2f35c73b ""
-  "main.aux" 1681970505 2354 3289ff37711970407be4f27f58671be2 "xelatex"
-  "main.out" 1681970505 1029 ee7e325fcdb08ae1ccf8b67ae847daa3 "xelatex"
-  "main.tex" 1681921165 205 d39503731f7911e92f6ddd5d2f35c73b ""
-  "picture/TrackNet 架構圖.jpg" 1681968879 216221 eebac6e4746e192752ea408dacdfab4e ""
-  "picture/熱度圖.jpg" 1681968876 40709 6cfab548e64d29a5371a7a30f684cacd ""
+  "c:/Users/user/Desktop/aog/ScienceFair/report/main.tex" 1682001603 205 d39503731f7911e92f6ddd5d2f35c73b ""
+  "main.aux" 1682001609 1847 589bb2586d9a3253c907f62e419ab3e4 "xelatex"
+  "main.out" 1682001609 1029 ee7e325fcdb08ae1ccf8b67ae847daa3 "xelatex"
+  "main.tex" 1682001603 205 d39503731f7911e92f6ddd5d2f35c73b ""
   "section/TitlePage.tex" 1681920528 537 8f4d294c0ddea1e6b67010ec08b98aab ""
   "section/abstract.tex" 1681965996 805 48f208a5d9a8d7882022cae005b66a4d ""
-  "section/pages.tex" 1681970502 2801 492f9284891c6fa77c78b6af9501e676 ""
+  "section/pages.tex" 1682001604 2482 fa2610bbf240969d064f6270036175fe ""
   "section/preamble.tex" 1681970287 1548 04acfc4a3fb7006742236c4e0059ca33 ""
   (generated)
   "main.aux"

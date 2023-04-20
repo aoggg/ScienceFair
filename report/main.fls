@@ -699,12 +699,6 @@ INPUT .\section\pages.tex
 INPUT section\pages.tex
 INPUT .\section\pages.tex
 INPUT section\pages.tex
-INPUT .\picture\TrackNet 架構圖.jpg
-INPUT .\picture\TrackNet 架構圖.jpg
-INPUT picture\TrackNet 架構圖.jpg
-INPUT .\picture\熱度圖.jpg
-INPUT .\picture\熱度圖.jpg
-INPUT picture\熱度圖.jpg
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm

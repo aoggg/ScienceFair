@@ -21,15 +21,6 @@
 
     TrackNet（黃昱銓，2018）提出了一個以 CNN（Convolutional Neural Network，卷積神經網路）為基礎的深度學習架構（如圖1）。但不同於其他深度學習網路，它容許一次輸入多張連續幀，可從中學習球的影像特徵及軌跡特性。然後仿效 FCN（FullyConvolutional Network，全卷積網路）的生成階段，生成用於偵測及定位球的熱度圖（如圖2）。最後再依據熱度圖計算畫面中可能存在的網球。這個模型不僅能從模糊影像中定位球的存在，更可以進一步的判斷受遮擋的網球位置，可以很好的達到我們的需求。
 
-    \begin{figure}
-        \includegraphics[width = 9cm]{picture/TrackNet 架構圖.jpg}\\
-        \caption{、TrackNet 架構圖}
-        \label{TrackNet 架構圖}
-        
-        \includegraphics[width = 9cm]{picture/熱度圖.jpg}
-        \caption{、熱度圖}
-        \label{熱度圖}
-    \end{figure}
 \end{itemize}
 
 \section{貳、研究設備與器材}
