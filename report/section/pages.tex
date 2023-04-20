@@ -19,8 +19,71 @@
     \item []
     \textbf{（一）TrackNet}
 
-    TrackNet（黃昱銓，2018）提出了一個以 CNN（Convolutional Neural Network，卷積神經網路）為基礎的深度學習架構（如圖1）。但不同於其他深度學習網路，它容許一次輸入多張連續幀，可從中學習球的影像特徵及軌跡特性。然後仿效 FCN（FullyConvolutional Network，全卷積網路）的生成階段，生成用於偵測及定位球的熱度圖（如圖2）。最後再依據熱度圖計算畫面中可能存在的網球。這個模型不僅能從模糊影像中定位球的存在，更可以進一步的判斷受遮擋的網球位置，可以很好的達到我們的需求。
+    TrackNet（黃昱銓，2018）提出了一個以 CNN（Convolutional Neural Network，卷積神經網路）為基礎的深度學習架構（如圖 \ref{TrackNet 架構圖}）。但不同於其他深度學習網路，它容許一次輸入多張連續幀，可從中學習球的影像特徵及軌跡特性。然後仿效 FCN（Fully Convolutional Network，全卷積網路）的生成階段，生成用於偵測及定位球的熱度圖（如圖 \ref{熱度圖}）。最後再依據熱度圖計算畫面中可能存在的網球。這個模型不僅能從模糊影像中定位球的存在，更可以進一步的判斷受遮擋的網球位置，可以很好的達到我們的需求。
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 9cm]{picture/TrackNet 架構圖.jpg}\\
+        \caption{、TrackNet 架構圖（黃昱銓，2018）}
+        \label{TrackNet 架構圖}
+        \vspace{1cm}
+        \includegraphics[width = 7cm]{picture/熱度圖.jpg}
+        \caption{、熱度圖（黃昱銓，2018）}
+        \label{熱度圖}
+    \end{figure}
+    \item[]
+    \textbf{（二）TrackNetV2}
 
+    TrackNetV2（Nian-En Sun et al., 2020）在 TrackNet 的基礎上改進了它的處理速度、準確度、記憶體用量等。他們將 TrackNet 的模型重新設計，讓它從一個 MISO（Multiple-In Single-Out）的模型變成一個 MIMO（Multiple-In Multiple-Out）的模型，處理速度從原本的 2.6 FPS（Frame per second）上升到 31.8 FPS。他們也參考了 U-Net 的 skip connection（殘差連接），將卷積層所得的特徵圖（feature map）串聯到相應的上採樣層（upsampling layer），以此方式將低層次與高層次的特徵結合起來以提高準確度。他們所使用的資料集為來自 18 場羽球比賽共 55563 幀的羽球比賽影片。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 9cm]{picture/TrackNetV2 架構圖.jpg}
+        \caption{、TrackNetV2 架構圖（Nian-En Sun et al., 2020）}
+        \label{TrackNetV2 架構圖}
+    \end{figure}
+
+    \item[]
+    \textbf{（三）卷積神經網路}
+
+    卷積神經網路（Convolutional Neural Network, CNN）是一種深度學習的神經網路模型，常被應用於影像識別方面。CNN 的結構包含卷積層（Convolution Layer）、池化層（Pooling Layer）、全連接層（Fully Connected Layer）。
+
+    \begin{itemize}
+        \setlength\parindent{2em}
+        \item []
+        \textbf{1. 概念}
+
+        \begin{itemize}
+            \setlength\parindent{2em}
+            \item []
+            \textbf{（１）權值共享}
+
+            在一般的圖像內有許多的特徵是相同的，如特定的輪廓或線條，那我們就可以讓相同幾個神經元組成的卷積核去學習這個特徵，透過滑動窗口對整張圖片進行卷積，進而達到節省參數的效果。（Cinnamon AI Taiwan，2019）
+
+            \item[]
+            \textbf{（２）保留位置資訊}
+
+            圖片中的像素（Pixels）與其鄰近的像素會有一定的關聯度，若使用 FC（Fully Connected，全連接網路結構）的結構來訓練圖像資訊的話，要先通過一個展開（Flatten）的步驟，把高維的資訊拉成一條直線，如此一來就會大量失去特徵之間的空間資訊。（Cinnamon AI Taiwan，2019）
+        \end{itemize}
+
+        \item[]
+        \textbf{2. 結構}
+
+        \begin{itemize}
+            \setlength\parindent{2em}
+            \item []
+            \textbf{（１）卷積層（Convolution Layer）}
+
+            卷積層負責提取圖像中的局部特徵，其原理是透過許多的卷積核（kernel）在圖片上進行滑動擷取特徵。將圖片與特定的卷積核進行卷積運算。
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width = 9cm]{picture/卷積層.jpg}
+                \caption{、卷積層（Brandon Da Silva，2018）}
+                \label{卷積層}
+            \end{figure}
+        \end{itemize}
+    \end{itemize}
 \end{itemize}
 
 \section{貳、研究設備與器材}

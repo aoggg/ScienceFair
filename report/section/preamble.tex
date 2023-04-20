@@ -2,7 +2,9 @@
 \usepackage{XeCJK}
 \usepackage{fontspec}
 \setCJKmainfont{mingliu.ttc}
-\setCJKmainfont[AutoFakeBold, AutoFakeSlant = .4]{mingliu.ttc}
+\setmainfont[AutoFakeBold = 3, AutoFakeSlant = true]{mingliu.ttc}
+\setCJKmainfont[AutoFakeBold = true, AutoFakeSlant = true]{mingliu.ttc}
+\setCJKmonofont[AutoFakeBold = true, AutoFakeSlant = true]{mingliu.ttc}
 
 % 版面設置
 \usepackage{geometry}
@@ -31,7 +33,20 @@
 \usepackage{url}
 
 % 連結顏色設定
-\usepackage[bookmarks,breaklinks,colorlinks=true,allcolors=blue]{hyperref}
+% \usepackage[bookmarks,breaklinks,colorlinks=true,allcolor=blue]{hyperref}
+
+% \usepackage[colorlinks,
+%             linkcolor=black,       %%修改此处为你想要的颜色
+%             anchorcolor=blue,  %%修改此处为你想要的颜色
+%             citecolor=blue,        %%修改此处为你想要的颜色，例如修改blue为red
+%             ]{hyperref}
+
+\usepackage[
+    colorlinks,
+    breaklinks = true,
+    urlcolor = blue,
+    linkcolor = black
+]{hyperref}
 
 % 連結自動換行
 
@@ -58,5 +73,7 @@
 
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{float}
+\usepackage{subfigure}
 \captionsetup[figure]{labelsep = space, name = {圖}}
 % \captionsetup[table]
