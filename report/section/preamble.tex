@@ -1,0 +1,62 @@
+% 中文、字型設定
+\usepackage{XeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{mingliu.ttc}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant = .4]{mingliu.ttc}
+
+% 版面設置
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    margin = 2cm
+}
+\linespread{1.5}
+
+%項目符號
+\usepackage{titlesec}
+\usepackage{titletoc}
+\titleformat{\section}[hang]{\centering\bfseries\Large}{}{0pt}{}[]
+\titleformat{\subsection}[hang]{\bfseries}{}{0pt}{}[]
+
+%自動縮排
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage{indentfirst} 
+\setlength\parindent{2em}
+\usepackage{setspace}
+
+% 超連結
+\usepackage{xcolor}
+\usepackage{url}
+
+% 連結顏色設定
+\usepackage[bookmarks,breaklinks,colorlinks=true,allcolors=blue]{hyperref}
+
+% 連結自動換行
+
+\makeatletter
+\def\UrlAlphabet{%
+      \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+      \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+      \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+      \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+      \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+      \do\Y\do\Z}
+\def\UrlDigits{\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\0}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\g@addto@macro{\UrlBreaks}{\UrlAlphabet}
+\g@addto@macro{\UrlBreaks}{\UrlDigits}
+\makeatother
+
+% itemize
+
+\usepackage{enumitem}
+\usepackage{zhlipsum}
+
+% 圖表設定
+
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{labelsep = space, name = {圖}}
+% \captionsetup[table]
