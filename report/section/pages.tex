@@ -135,6 +135,92 @@
 
 \section{參、研究過程或方法}
 
+\subsection{一、研究構思與架構}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=15pt]
+        \node[box] (start) {閱讀相關文獻};
+        \node[box, below = of start] (step 1) {使用 TrackNetV2 提供之資料集嘗試進行訓練};
+        \node[box, below = of step 1] (step 2) {資料集收集};
+        \node[box, below = of step 2] (step 3) {標記資料集};
+        \node[box, below = of step 3] (step 4) {生成訓練數據};
+        \node[box, below = of step 4] (step 5) {訓練模型};
+        \node[box, below = of step 5] (end) {效能評估};
+        
+        \graph {
+            (start) -> (step 1) -> (step 2) -> (step 3) -> (step 4) -> (step 5) -> (end);
+        };
+    \end{tikzpicture}
+    \caption{、研究流程圖}
+    \label{研究流程圖}
+\end{figure}
+
+圖 \ref{研究流程圖} 為我們的研究流程圖。首先我們閱讀 TrackNet、TrackNetV2 及其他物件追蹤相關論文，以了解相關技術，並嘗試使用 TrackNetV2 所提供的羽球資料集進行訓練，熟悉訓練流程並修改部分因版本更新無法使用的程式碼。
+
+接下來我們由網路下載排球比賽影片，切割成「發球～死球」的數個影片，利用 Labeling Tool 標記排球中心在每幀的所在位置，然後生成熱度圖等訓練數據後進行訓練，最後由其他比賽擷取測試資料進行測試並評估性能。
+
+\begin{table}[H]
+    \centering
+    \caption{、訓練集與測試集整理}
+    \label{訓練集與測試集整理}
+    \begin{tabular}{cccc}
+        \hline
+        \textbf{集別} & \textbf{比賽名稱} & \textbf{擷取長度} & \textbf{功能}\\
+        \hline
+        訓練集 & \makecell[c]{108UVL 大專排球聯賽女一級\\季軍賽} & 1240 秒 & \makecell[c]{人工標記排球位置後\\作為訓練資料訓練模型}\\
+        \hline
+        測試集 & \makecell[c]{108UVL 大專排球聯賽女一級\\冠軍賽} & 76 秒 & \makecell[c]{模型訓練完成後\\使用此測試資料測試模型性能}\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{二、研究過程}
+
+\begin{itemize}
+    \setlength\parindent{2em}
+    \item []
+    \textbf{（一）資料集收集}
+
+    我們由 108UVL 大專排球聯賽女一級季軍賽擷取比賽片段，為去除與`排球追蹤無關部分，每段子影片擷取發球到死球的段落，影片名稱為「局數\_A方比數\_B方比數」，如 1\_00\_00.mp4。影片幀數為每秒 30 幀，解析度為 $1920\times1080$。
+
+    原影片長度 2 小時 14 分 35 秒，擷取後資料集全長共 1240 秒，37200 幀。
+
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[t]{0.48\textwidth}
+            \centering
+            \includegraphics[width = 7cm]{picture/發球.jpg}
+            \caption{、發球}
+            \label{發球}
+        \end{minipage}
+        \begin{minipage}[t]{0.48\textwidth}
+            \centering
+            \includegraphics[width = 7cm]{picture/死球.jpg}
+            \caption{、死球}
+            \label{死球}
+        \end{minipage}
+    \end{figure}
+
+    我們先記錄每個子影片的名稱、開始與結束時間在一個 csv 檔內，再使用 moviepy.editor 切割影片。
+    
+    記錄格式 : 局數\_A方比數\_B方比數, 開始時, 開始分, 開始秒, 結束時, 結束分, 結束秒（如表 \ref{紀錄格式示意圖} 所示）。
+
+    \begin{table}[H]
+        \centering
+        \caption{、紀錄格式示意圖}
+        \label{紀錄格式示意圖}
+        \begin{tabular}{ccccccc}
+            \hline
+            1\_00\_00 & 0 & 5 & 35 & 0 & 5 & 46\\
+            \hline
+            1\_00\_02 & 0 & 6 & 18 & 0 & 6 & 22\\
+            \hline
+            1\_03\_03 & 0 & 7 & 39 & 0 & 7 & 43\\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{itemize}
+
 \section{肆、研究結果}
 
 \section{伍、討論}

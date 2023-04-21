@@ -75,5 +75,25 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{subfigure}
+\usepackage{makecell}
 \captionsetup[figure]{labelsep = space, name = {圖}}
-% \captionsetup[table]
+\captionsetup[table]{labelsep = space, name = {表}}
+
+% 流程圖
+
+\usepackage{tikz}
+\usetikzlibrary{graphs, positioning, shapes.geometric}
+\tikzset {
+    box/.style = {
+        rectangle,
+        rounded corners = 5pt,
+        minimum width = 50pt,
+        minimum height = 20pt,
+        inner sep = 10pt,
+        draw = black
+    }
+}
+
+% 數學
+
+\usepackage{mathtools}
