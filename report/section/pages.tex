@@ -82,11 +82,56 @@
                 \caption{、卷積層（Brandon Da Silva，2018）}
                 \label{卷積層}
             \end{figure}
+
+            \item[]
+            \textbf{（２）池化層（Pooling Layer）}
+
+            池化層是用來大幅降低參數量級（降維）、降低過擬合問題、緩解卷積層對位置的敏感度。池化層的計算與卷積層一樣，都是透過滑動視窗框選的局部數值進行數值運算，最常用的計算方式為 Max pooling，在框選的局部數值中挑出最大值。（李謦伊，2020）
+        
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width = 9cm]{picture/池化層.jpg}
+                \caption{、池化層（Max pooling）（cs231n，2021）}
+                \label{池化層}
+            \end{figure}
+
+            \item[]
+            \textbf{（３）全連接層（Fully Connected Layer）}
+
+            在經過攤平（Flatten）變為一維數據後，全連接層（FC）主要在做最後的特徵提取，並且利用最後一層 FC 當作分類器。
+
         \end{itemize}
     \end{itemize}
 \end{itemize}
 
 \section{貳、研究設備與器材}
+
+\subsection{一、硬體設備}
+
+\begin{itemize}
+    \item []（一）中央處理器(CPU) AMD Ryzen 9 5950X 16-Core Processor
+    \item []（二）記憶體：32GiB
+    \item []（三）圖形處理器 (GPU)：NVIDIA GeForce RTX 3090 (GPU 記憶體 24 GiB)
+    \item []（四）作業系統：Linux (Ubuntu 20.04.01)
+\end{itemize}
+
+\subsection{二、軟體及工具環境}
+
+\begin{itemize}
+    \item []（一）Python 3.7.13：具有高效能的高階資料結構，直譯式且物件導向的程式語言。
+    \item []（二）moviepy.editor 1.0.3：是一個 Python 用來編輯影片的函式庫。
+    \item []（三）PyQt5 5.15.7：是一個 Python 用來創建圖形使用介面（Graphical User Interface, GUI）應用程式的函式庫。
+    \item []（四）pandas 1.3.5：是一個 Python 用來操作及分析資料的函式庫。
+    \item []（五） PyMySQL 1.0.2：是 Python 用來連接到 MySQL 資料庫伺服器的一個介面。
+    \item []（六）opencv-python 4.6.0.66：是一個用於解決電腦視覺相關問題的 Python 函式庫。
+    \item []（七）imutils 0.5.4：整合了 OpenCV 、 numpy 和 matplotlib 的相關操作的套件，主要用於進行圖像處理。
+    \item []（八）Pillow 9.2.0：是一個 Python 中用於影像辨識的套件庫，可以用來旋轉照片、嵌字、合成照片、變更圖片解析度等。
+    \item []（九）piexif 1.1.3：可以讀取與修改圖片 Exif（可交換圖檔格式）的套件，通常與 Pillow 搭配使用。
+    \item []（十）scikit-learn 1.0.2：是一個開源資料分析函式庫，具有各種分類、回歸和集群分析。
+    \item []（十一）keras 2.9.0：是一款用 Python 編寫而成的開源神經網路函式庫，能搭配 TensorFlow 、 Theano 等運作。
+    \item []（十二）TensorFlow 2.9.2：是現在重要的深度學習框架之一，支援各式不同的深度學習演算法。
+    \item []（十三）CUDA 10.1.243：是用於圖形處理單元（graphical processing units，GPU）的平行運算平台和程式設計模型。
+\end{itemize}
 
 \section{參、研究過程或方法}
 
