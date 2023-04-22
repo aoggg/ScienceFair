@@ -1,8 +1,8 @@
 % 中文、字型設定
-\usepackage{XeCJK}
+\usepackage{xeCJK}
 \usepackage{fontspec}
 \setCJKmainfont{mingliu.ttc}
-\setmainfont[AutoFakeBold = 3, AutoFakeSlant = true]{mingliu.ttc}
+\setmainfont[AutoFakeBold = 3, AutoFakeSlant = .4]{mingliu.ttc}
 \setCJKmainfont[AutoFakeBold = true, AutoFakeSlant = true]{mingliu.ttc}
 \setCJKmonofont[AutoFakeBold = true, AutoFakeSlant = true]{mingliu.ttc}
 
@@ -31,15 +31,6 @@
 % 超連結
 \usepackage{xcolor}
 \usepackage{url}
-
-% 連結顏色設定
-% \usepackage[bookmarks,breaklinks,colorlinks=true,allcolor=blue]{hyperref}
-
-% \usepackage[colorlinks,
-%             linkcolor=black,       %%修改此处为你想要的颜色
-%             anchorcolor=blue,  %%修改此处为你想要的颜色
-%             citecolor=blue,        %%修改此处为你想要的颜色，例如修改blue为red
-%             ]{hyperref}
 
 \usepackage[
     colorlinks,
@@ -97,3 +88,18 @@
 % 數學
 
 \usepackage{mathtools}
+
+% code
+
+\usepackage{listings}
+
+\lstset{
+    basicstyle = \ttfamily,
+    rulesepcolor = \color{black},
+    breaklines = true,
+    numbers = left, 
+    numberstyle = \small,
+    keywordstyle = \color{blue},
+    commentstyle = \color{gray},
+    frame = single
+}
